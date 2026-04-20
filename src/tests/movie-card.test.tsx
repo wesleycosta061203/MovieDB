@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import { FavoritesProvider } from '../features/favorites/store/FavoritesProvider';
 import { MovieCard } from '../features/movies/components/MovieCard';
@@ -21,9 +21,9 @@ function renderWithProviders() {
   return render(
     <QueryClientProvider client={queryClient}>
       <FavoritesProvider>
-        <BrowserRouter>
+        <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <MovieCard movie={movie} />
-        </BrowserRouter>
+        </MemoryRouter>
       </FavoritesProvider>
     </QueryClientProvider>,
   );

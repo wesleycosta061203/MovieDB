@@ -6,6 +6,8 @@ describe('highlightText', () => {
   it('destaca o termo pesquisado dentro do texto', () => {
     render(<div>{highlightText('Aventura no Espaço', 'Aventura')}</div>);
 
-    expect(screen.getByText('Aventura')).toHaveTagName('MARK');
+    const highlightedElement = screen.getByText('Aventura');
+
+    expect(highlightedElement.tagName).toBe('MARK');
   });
 });
