@@ -1,5 +1,7 @@
 # MovieDB - TMDB React App
 
+URL Vercel: https://movie-pij5zhvlw-wesleycosta061203s-projects.vercel.app/
+
 Aplicação React + TypeScript para explorar filmes populares, pesquisar títulos e gerenciar favoritos com persistência local.
 
 ## Stack
